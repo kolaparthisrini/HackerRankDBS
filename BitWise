@@ -1,6 +1,8 @@
 
 Lonely Integer===>XOR,XAND,and,or
 
+Long.toBinaryString(i/p)==>to convert to binary representation
+
 Bitwise XOR
 XOR(^) is a binary operation called exclusive OR and works as
 
