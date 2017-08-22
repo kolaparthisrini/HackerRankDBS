@@ -21,4 +21,20 @@ Custom Sorting
 
 https://stackoverflow.com/questions/5245093/using-comparator-to-make-custom-sort
 
-1)Use String Builder for creating applications like text editor,text tools.
+==>Use String Builder for creating applications like text editor,text tools.
+
+===>XOR in Depth
+---------------------
+Look at the truth table of XOR:
+0 ^ 0 = 0
+0 ^ 1 = 1
+1 ^ 0 = 1
+1 ^ 1 = 0
+Now look at the truth table of addition in binary:
+0 + 0 = 0 (carry 0)
+0 + 1 = 1 (carry 0)
+1 + 0 = 1 (carry 0)
+1 + 1 = 0 WITH CARRY 1 (=10)
+This means the addition between two digits in binary is the XOR of the two bits, and the carry is the AND of the bits.
+If you look for two operands A, B where A ^ B = A + B, you need that you never have a carry when summing them. This happens if it NEVER happens that the i-th bit of A and the i-th bit of B are both 1. So given the operand A, all the bits in A which are 1 must be 0 in B. They are fixed bits and you have no choice for them. But all other bits in B are free and you can set them to 1 or 0 and the equation will keep being true. To count all possible values of B, you must then count the 0's in A (i.e. the number of free bits in B) and calculate 2 to the power of the free bits.
+
