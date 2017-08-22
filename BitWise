@@ -1,2 +1,16 @@
 
 Lonely Integer===>XOR,XAND,and,or
+
+Bitwise XOR
+XOR(^) is a binary operation called exclusive OR and works as
+
+1^0 = 1  
+0^1 = 1  
+0^0 = 0
+1^1 = 0  
+XOR by 1 can work like a toggle switch that turns 1 to 0 or 0 to 1.
+
+Another interesting thing to note is
+
+x^0 = x 
+x^x = 0
