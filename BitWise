@@ -14,3 +14,9 @@ Another interesting thing to note is
 
 x^0 = x 
 x^x = 0
+----------------------------------------------------------
+
+Custom Sorting
+--------------
+
+https://stackoverflow.com/questions/5245093/using-comparator-to-make-custom-sort
