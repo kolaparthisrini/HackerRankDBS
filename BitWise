@@ -20,3 +20,5 @@ Custom Sorting
 --------------
 
 https://stackoverflow.com/questions/5245093/using-comparator-to-make-custom-sort
+
+1)Use String Builder for creating applications like text editor,text tools.
