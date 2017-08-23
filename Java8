@@ -1,0 +1,14 @@
+Once java-8 is out (March 2014) you'll be able to use streams:
+
+int[] a = {10,20,30,40,50};
+int sum = IntStream.of(a).sum();
+System.out.println("The sum is " + sum);
+Output:
+
+The sum is 150.
+
+It's in the package java.util.stream
+
+import java.util.stream.*;
+
+-----------------------------------------------------------
