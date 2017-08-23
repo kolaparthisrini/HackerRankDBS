@@ -12,3 +12,5 @@ It's in the package java.util.stream
 import java.util.stream.*;
 
 -----------------------------------------------------------
+
+Collects.sort(list,number)==>for shifting no's left to right.
