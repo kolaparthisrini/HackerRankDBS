@@ -77,3 +77,82 @@ Explanation 0
 n = 8 and numbers = [1, 3, 1, 4, 5, 6, 3, 2].
 
 The integers 1 and 3 both occur more than once, so we return 2 as our answer.
+
+
+5)
+
+Consider an initially empty dataset of integers named elements. We want to perform the following query operations on elements:
+ 
+The command push x inserts the value of x into elements.
+The command pop x removes the value of x from elements.
+ 
+We want to order the integers in elements in such a way that, after performing each operation, we can easily calculate the product of the maximum and minimum values in elements.
+ 
+Complete the function in the editor below. It has the following parameters:
+ 
+An array of n strings, operations, denoting the list of operations where each operationi is either push or pop.
+An array of n integers, x, where xi denotes the value of x to be inserted or removed into elements when performing operationsi.
+ 
+The function must return an array of n long integers where the value at each index i denotes the product of the maximum and minimum elements in elements after performing operationi xi. Note that each operation must be performed in order (i.e., from index 0 to index n−1), and it is guaranteed that the value of xi for operationi = "pop" will always have already been pushed into elements prior to the pop operation being called.
+ 
+Input Format
+The first line contains an integer, n, denoting the size of operations.
+Each line i of the n subsequent lines (where 0 ≤ i < n) contains a string describing operationsi.
+The next line contains an integer, n, denoting the size of x.
+Each line i of the n subsequent lines (where 0 ≤ i < n) contains an integer describing xi.
+ 
+Constraints
+1 ≤ n ≤ 105
+1 ≤ xi ≤ 109
+It is guaranteed that each operationsi is either push or pop.
+ 
+Output Format
+The function must return an array of n long integers where the value at each index i denotes the product of the maximum and minimum elements in elements after performing operation operationsi with x value xi.
+ 
+Sample Input 0
+4
+push
+push
+push
+pop
+4
+1
+2
+3
+1
+ 
+Sample Output 0
+1
+2
+3
+6
+ 
+Explanation 0
+We have operations = [push, push, push, pop] and x = [1, 2, 3, 1]; we'll visualize elements as an empty multiset, elements = {}, and refer to our return array as products. The sequence of operations looks like this:
+ 
+push 1 → elements = {1}, so our minimum = 1 and our maximum = 1. We then store their product as products0 = 1 × 1 = 1.
+push 2 → elements = {1, 2}, so our minimum = 1 and our maximum = 2. We then store their product as products1 = 1 × 2 = 2.
+push 3 → elements = {1, 2, 3}, so our minimum = 1 and our maximum = 3. We then store their product as products2 = 1 × 3 = 3.
+pop 1 → elements = {2, 3}, so our minimum = 2 and our maximum = 3. We then store their product as products3 = 2 × 3 = 6.
+ 
+We then return products = [1, 2, 3, 6] as our answer.
+ 
+Sample Input 1
+2
+push
+push
+2
+3
+2
+ 
+Sample Output 0
+9
+6
+ 
+Explanation 1
+We have operations = [push, push] and x = [3, 2]; we'll visualize elements as an empty multiset, elements = {}, and refer to our return array as products. The sequence of operations looks like this:
+ 
+push 3 → elements = {3}, so our minimum = 3 and our maximum = 3. We then store their product as products0 = 3 × 3 = 9.
+push 2 → elements = {2, 3}, so our minimum = 2 and our maximum = 3. We then store their product as products1 = 2 × 3 = 6.
+ 
+We then return products = [9, 6] as our answer.
